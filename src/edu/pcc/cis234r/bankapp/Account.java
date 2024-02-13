@@ -3,7 +3,7 @@ package edu.pcc.cis234r.bankapp;
 public class Account {
 
     private int account_number;
-    private String type;
+    private final String type;
     private double balance;
 
     /**
@@ -15,24 +15,26 @@ public class Account {
         this.balance = balance;
     }
 
-    public double getBalance(){
+    public double get_balance(){
         return balance;
     }
-    public int getAccount_number(){
+    public int get_account_number(){
         return account_number;
     }
-    private void setBalance(double balance){
+    public String get_type(){
+        return type;
+    }
+    private void set_balance(double balance){
         this.balance = balance;
     }
-    public void setAccount_number(int account_number) {
+    public void set_account_number(int account_number) {
         this.account_number = account_number;
-
     }
-    public double withdrawl(Account account, double amount){
-        return balance = account.getBalance() - amount;
+    public void withdrawl(Account account, double amount){
+        balance = account.get_balance() - amount;
     }
 
-    public double deposit(Account account, double amount){
-        return balance = account.getBalance() + amount;
+    public void deposit(Account account, double amount){
+        balance = account.get_balance() + amount;
     }
 }

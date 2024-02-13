@@ -1,12 +1,11 @@
 package edu.pcc.cis234r.bankapp;
 
-
 public class AccountHolder {
 
-    private String name;
-    private String city;
-    private int checking = 0;
-    private int savings = 0;
+    private final String name;
+    private final String city;
+    private int checking;
+    private int savings;
 
     /**
      * Create AccountHolder object with given properties
@@ -29,26 +28,14 @@ public class AccountHolder {
     public String getCity(){
         return city;
     }
-    public int getChecking() {
-        return checking;
-    }
-    public int getSavings(){
-        return savings;
-    }
-    public void getCheckingInfo(Account account){
-        if (account.getAccount_number() == 0) {
+    public void getAccountInfo(Account account){
+        if (checking == 0) {
             System.out.println("No checking account set up yet.");
-        } else {
-            System.out.println("Checking Account Number: " + getChecking());
-            System.out.println("Balance: $" + account.getBalance());
         }
-    }
-    public void getSavingsInfo(Account account){
         if (savings == 0) {
             System.out.println("No savings account set up yet.");
-        } else {
-            System.out.println("Savings Account Number: " + getSavings());
-            System.out.println("Savings Balance: $" + account.getAccount_number());
         }
-    }
+            System.out.println(account.get_type() + " Account Number: " + account.get_account_number());
+            System.out.println(account.get_type() + " Checking Account Balance: " + account.get_balance());
+        }
 }
