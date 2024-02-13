@@ -28,7 +28,7 @@ public class Account {
     private void set_balance(double balance){
         this.balance = balance;
     }
-    public void set_account_number(int account_number) {
+    private void set_account_number(int account_number) {
         this.account_number = account_number;
     }
     public void withdrawl(Account account, double amount){
