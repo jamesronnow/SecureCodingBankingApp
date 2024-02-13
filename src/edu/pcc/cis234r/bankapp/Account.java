@@ -24,6 +24,7 @@ public class Account {
     public String get_type(){
         return type;
     }
+
     private void set_balance(double balance){
         this.balance = balance;
     }
@@ -33,7 +34,6 @@ public class Account {
     public void withdrawl(Account account, double amount){
         balance = account.get_balance() - amount;
     }
-
     public void deposit(Account account, double amount){
         balance = account.get_balance() + amount;
     }

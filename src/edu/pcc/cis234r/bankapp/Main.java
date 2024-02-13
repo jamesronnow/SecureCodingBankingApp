@@ -7,7 +7,10 @@ public class Main {
         Account checking_account = new Account(12345, "Checking", 999.99);
         Account savings_account = new Account(22345, "Savings", 899.00);
 
-        System.out.println("Welcome " + account_holder.getName());
+        System.out.println("Welcome " + account_holder.getName() + "!\n");
+
+        account_holder.getAccountInfo(checking_account);
+        account_holder.getAccountInfo(savings_account);
 
         account_holder.setChecking(checking_account.get_account_number());
         account_holder.setSavings(savings_account.get_account_number());
